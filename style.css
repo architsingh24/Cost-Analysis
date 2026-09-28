@@ -1,0 +1,255 @@
+/* ==========================================================================
+   FinOps Cost Analyzer - Modern Theme & Design System
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Base Application Styling */
+.stApp {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    background: linear-gradient(135deg, var(--bg-start, #120a06) 0%, var(--bg-end, #080402) 100%) !important;
+    color: var(--font-color, #fdfbf7) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    letter-spacing: -0.02em !important;
+    color: var(--font-color, #fdfbf7) !important;
+}
+
+/* Glassmorphism Metric Cards */
+.metric-card {
+    background: var(--card-bg, rgba(28, 18, 14, 0.75));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.metric-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(249, 115, 22, 0.35);
+    box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.45);
+}
+
+.metric-label {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.metric-value {
+    margin: 8px 0 4px 0;
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.metric-subtext {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Chart Container Cards */
+.chart-container {
+    background: rgba(18, 12, 9, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Sidebar Customization */
+section[data-testid="stSidebar"] {
+    background-color: var(--sidebar-bg, #0b0705) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+section[data-testid="stSidebar"] .stMarkdown p {
+    color: #d1d5db;
+}
+
+/* Sidebar Brand Header */
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.sidebar-brand-icon {
+    font-size: 1.8rem;
+}
+
+.sidebar-brand-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary-accent, #f97316);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.sidebar-brand-sub {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+/* Connection Badges */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 24px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.status-live {
+    background-color: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.status-demo {
+    background-color: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.status-error {
+    background-color: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+/* Notification Feed Items */
+.notification-card {
+    background: rgba(25, 16, 12, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    transition: all 0.2s ease;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.notification-card:hover {
+    background: rgba(32, 20, 15, 0.85);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateX(3px);
+}
+
+.notification-critical {
+    border-left: 4px solid #ef4444;
+}
+
+.notification-warning {
+    border-left: 4px solid #f59e0b;
+}
+
+.notification-tip {
+    border-left: 4px solid #10b981;
+}
+
+.notification-info {
+    border-left: 4px solid #38bdf8;
+}
+
+/* Interactive Buttons */
+.stButton > button {
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Custom Navigation Links in Sidebar */
+.nav-link-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #d1d5db;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.nav-link-card:hover {
+    background: rgba(249, 115, 22, 0.12);
+    border-color: var(--primary-accent, #f97316);
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+.nav-link-active {
+    background: var(--primary-accent, #f97316) !important;
+    color: #ffffff !important;
+    border-color: var(--primary-accent, #f97316) !important;
+    box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+}
+
+/* Clean up Streamlit UI chrome */
+header[data-testid="stHeader"] {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+div[data-testid="stAppDeployButton"],
+.stDeployButton,
+div[class*="DeployButton"] {
+    display: none !important;
+}
+
+/* Code & Monospace styling */
+code {
+    font-family: 'JetBrains Mono', monospace !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 6px !important;
+    padding: 2px 6px !important;
+}
+
+/* Responsive Grid adjustments */
+@media (max-width: 900px) {
+    .metric-value {
+        font-size: 1.5rem !important;
+    }
+    .metric-card {
+        padding: 16px !important;
+    }
+}
